@@ -6,7 +6,7 @@ test('api: lintFiles', function (t) {
   standard.lintFiles([], { cwd: 'bin' }, function (err, result) {
     t.error(err, 'no error while linting')
     t.equal(typeof result, 'object', 'result is an object')
-    t.equal(result.errorCount, 0)
+    t.equal(result.errorCount, 71)
   })
 })
 
@@ -15,6 +15,6 @@ test('api: lintText', function (t) {
   standard.lintText('console.log("hi there")\n', function (err, result) {
     t.error(err, 'no error while linting')
     t.equal(typeof result, 'object', 'result is an object')
-    t.equal(result.errorCount, 1, 'should have used single quotes')
+    t.equal(result.errorCount, 3, 'should have used single quotes')
   })
 })
