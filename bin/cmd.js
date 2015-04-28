@@ -3,7 +3,7 @@
 var fs = require('fs')
 var minimist = require('minimist')
 var standard = require('../')
-var standardFormat = require('standard-format')
+var standardFormat = require('videojs-standard-format')
 var stdin = require('get-stdin')
 
 var argv = minimist(process.argv.slice(2), {
@@ -30,7 +30,7 @@ if (argv._[0] === '-') {
 if (argv.help) {
   console.log(function () {
   /*
-  standard - JavaScript Standard Style
+  standard - VideoJS JavaScript Standard Style
 
   Usage:
       standard <flags> [FILES...]
@@ -48,8 +48,8 @@ if (argv.help) {
           --version   Show current version.
       -h, --help      Show usage information.
 
-  Readme:  https://github.com/feross/standard
-  Report bugs:  https://github.com/feross/standard/issues
+  Readme:  https://github.com/videojs/standard
+  Report bugs:  https://github.com/videojs/standard/issues
 
   */
   }.toString().split(/\n/).slice(2, -2).join('\n'))
@@ -87,8 +87,8 @@ function onResult (err, result) {
   if (result.errorCount === 0) process.exit(0)
 
   console.error(
-    'standard: Use JavaScript Standard Style ' +
-    '(https://github.com/feross/standard)'
+    'standard: Use VideoJS JavaScript Standard Style ' +
+    '(https://github.com/videojs/standard)'
   )
 
   result.results.forEach(function (result) {
@@ -109,7 +109,7 @@ function onError (err) {
   console.error(err.stack || err.message || err)
   console.error(
     '\nIf you think this is a bug in `standard`, open an issue: ' +
-    'https://github.com/feross/standard'
+    'https://github.com/videojs/standard'
   )
   process.exit(1)
 }

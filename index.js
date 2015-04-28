@@ -23,7 +23,7 @@ var DEFAULT_IGNORE_PATTERNS = [
 ]
 
 var ESLINT_CONFIG = {
-  configFile: path.join(__dirname, 'rc', '.eslintrc'),
+  configFile: path.join(__dirname, 'rc', 'eslintrc.json'),
   useEslintrc: false
 }
 

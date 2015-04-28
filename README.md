@@ -25,58 +25,7 @@ This module saves you (and others!) time in two ways:
 ## Install
 
 ```bash
-npm install standard
-```
-
-## Rules
-
-- **2 spaces** – for indentation
-- **Single quotes for strings** – except to avoid escaping
-- **No unused variables** – this one catches *tons* of bugs!
-- **No semicolons** – [It's][1] [fine.][2] [Really!][3]
-- **Never start a line with `(` or `[`**
-    - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
-    - [More details][4]
-- **Space after keywords** `if (condition) { ... }`
-- **Space after function name** `function name (arg) { ... }`
-- Name the context variable `self` – `var self = this`
-  - Accidental [`window.self`][5] usage is dissallowed (happens when `var self = this` is
-    omitted)
-- Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
-- Always handle the node.js `err` function parameter
-- Always prefix browser globals with `window` – except `document` and `navigator` are okay
-  - Prevents accidental use of poorly-named browser globals like `open`, `length`,
-    `event`, and `name`.
-- **And [more goodness][6]** – *give `standard` a try today!*
-
-[1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
-[3]: https://github.com/maxogden/messages/issues/18
-[4]: RULES.md#automatic-semicolon-insertion-asi
-[5]: https://developer.mozilla.org/en-US/docs/Web/API/Window.self
-[6]: RULES.md#javascript-standard-style
-
-To get a better idea, take a look at
-[a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
-in JavaScript Standard Style, or check out some of
-[the repositories](https://github.com/feross/standard/blob/master/test/clone.js) that use
-`standard`.
-
-## Badge
-
-Use this in one of your projects? Include one of these badges in your readme to
-let people know that your code is using the standard style.
-
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-
-```markdown
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-```
-
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-
-```markdown
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+npm install videojs-standard
 ```
 
 ## Usage
@@ -87,7 +36,7 @@ your terminal (flag `-g` installs `standard` globally on your system, omit it if
 to install in the current working directory):
 
 ```bash
-npm install standard -g
+npm install videojs-standard -g
 ```
 
 After you've done that you should be able to use the `standard` program. The simplest use
@@ -95,13 +44,13 @@ case would be checking the style of all JavaScript files in the current working 
 
 ```
 $ standard
-Error: Use JavaScript Standard Style
+Error: Use VideoJS JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
 ### Editor plugins
 
-First, install `standard`. Then, install the appropriate plugin for your editor:
+First, install `videojs-standard`. Then, install the appropriate plugin for your editor:
 
 - **[Sublime Text](https://www.sublimetext.com/)** - Install
   [Package Control](https://packagecontrol.io/),
@@ -121,7 +70,7 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
   {
     "name": "my-cool-package",
     "devDependencies": {
-      "standard": "^3.0.0"
+      "videojs-standard": "^3.0.0"
     },
     "scripts": {
       "test": "standard && node my-tests.js"
@@ -133,7 +82,7 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
 
   ```
   $ npm test
-  Error: Use JavaScript Standard Style
+  Error: Use VideoJS JavaScript Standard Style
     lib/torrent.js:950:11: Expected '===' and instead saw '=='.
   ```
 
@@ -141,9 +90,9 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
 
 ## FAQ
 
-### Why would I use JavaScript Standard Style?
+### Why would I use VideoJS JavaScript Standard Style?
 
-The beauty of JavaScript Standard Style is that it's simple. No one wants to maintain
+The beauty of VideoJS JavaScript Standard Style is that it's simple. No one wants to maintain
 multiple hundred-line style configuration files for every module/project they work on.
 Enough of this madness!
 
@@ -154,17 +103,17 @@ This module saves you time in two ways:
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
 
-Adopting `standard` style means ranking the importance of code clarity and community
+Adopting `videojs-standard` style means ranking the importance of code clarity and community
 conventions higher than personal style. This might not make sense for 100% of projects and
 development cultures, however open source can be a hostile place for newbies. Setting up
 clear, automated contributor expectations makes a project healthier.
 
 ### I disagree with rule X, can you change it?
 
-No. The the whole point of `standard` is to avoid [bikeshedding][bikeshedding] about
+No. The the whole point of `videojs-standard` is to avoid [bikeshedding][bikeshedding] about
 style. There are lots of debates online about tabs vs. spaces, etc. that will never be
 resolved. These debates just distract from getting stuff done. At the end of the day you
-have to 'just pick something', and that's the whole philosophy of `standard` -- its a
+have to 'just pick something', and that's the whole philosophy of `videojs-standard` -- its a
 bunch of sensible 'just pick something' opinions. Hopefully, users see the value in that
 over defending their own opinions.
 
@@ -184,7 +133,7 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 ### Is there an automatic formatter?
 
 Yes! Just run `standard --format filename.js`. This uses
-[Max Ogden][max]'s automatic formatter
+the video.js fork of [Max Ogden][max]'s automatic formatter
 [`standard-format`][standard-format], which can automatically
 fix most code issues.
 
@@ -192,7 +141,7 @@ While most issues can be fixed, some, like not handling errors in node-style cal
 must be fixed manually.
 
 [max]: https://github.com/maxogden
-[standard-format]: https://github.com/maxogden/standard-format
+[standard-format]: https://github.com/videojs/standard-format
 
 ### How do I ignore files?
 
@@ -217,14 +166,16 @@ a `standard.ignore` property to `package.json`:
 
 In rare cases, you'll need to break a rule and hide the warning generated by `standard`.
 
-JavaScript Standard Style uses [`eslint`](http://eslint.org/) under-the-hood and you can
+VideoJS JavaScript Standard Style uses [`eslint`](http://eslint.org/) under-the-hood and you can
 hide warnings as you normally would if you used `eslint` directly.
+
+Use the eslint inline directives like: `/*eslint no-console:0*/` or `/*eslint-disable*/` 
 
 To get verbose output (so you can find the particular rule name to ignore), run:
 
 ```bash
 $ standard --verbose
-Error: Use JavaScript Standard Style
+Error: Use VideoJS JavaScript Standard Style
   routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
 ```
 
