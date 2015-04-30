@@ -83,9 +83,6 @@ if (argv.stdin) {
 }
 
 function onResult (err, result) {
-  if (err) return onError(err)
-  if (result.errorCount === 0) process.exit(0)
-
   console.error(
     'standard: Use VideoJS JavaScript Standard Style ' +
     '(https://github.com/videojs/standard)'
@@ -100,6 +97,9 @@ function onResult (err, result) {
       )
     })
   })
+
+  if (err) return onError(err)
+  if (result.errorCount === 0) process.exit(0)
 
   process.exit(1)
 }
