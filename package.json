@@ -10,7 +10,7 @@
     "url": "https://github.com/videojs/standard/issues"
   },
   "dependencies": {
-    "eslint-config-videojs": "4.4.0",
+    "eslint-config-videojs": "^1.0.0",
     "standard-engine": "^2.0.4"
   },
   "homepage": "https://github.com/videojs/standard",
