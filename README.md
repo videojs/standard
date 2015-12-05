@@ -93,6 +93,8 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 
 ### Is there an automatic formatter?
 
+__Note: at the moment, this feature is not functional, but will be brought back for a future release!__
+
 Yes! Just run `vjsstandard --format filename.js`. This uses the video.js fork of [Max Ogden][max]'s automatic formatter [`videojs-standard-format`][videojs-standard-format], which can automatically fix most code issues.
 
 While most issues can be fixed, some, like not handling errors in node-style callbacks, must be fixed manually.
@@ -171,30 +173,21 @@ This lets `vjsstandard` (as well as humans reading your code) know that `self` i
 
 ### Is there a Git `pre-commit` hook for `vjsstandard`?
 
-Funny you should ask!
+Sure! Add the following to the `.git/hooks/pre-commit` script in your repository:
 
 ```sh
 #!/bin/sh
-# Ensure all javascript files staged for commit pass standard code style
-git diff --name-only --cached --relative | grep '\.js$' | xargs standard
+
+# Ensure all JS files staged for commit pass video.js Standard Style
+git diff --name-only --cached --relative | grep '\.js$' | xargs vjsstandard
 exit $?
-```
-
-Alternatively, [overcommit](https://github.com/brigade/overcommit) is a Git hook manager that includes support for running `vjsstandard` as a Git pre-commit hook.
-
-To enable this, add the following to your `.overcommit.yml` file:
-
-```yaml
-PreCommit:
-  Standard:
-    enabled: true
 ```
 
 ## License
 
 Apache-2.0. Copyright (c) [Brightcove, Inc.][bcov]
 
-This project is based on [`vjsstandard`][standard], which is licensed under the MIT license and copyright (c) Feross Aboukhadijeh.
+This project is based on [`standard`][standard], which is licensed under the MIT license and copyright (c) Feross Aboukhadijeh.
 
 [bcov]: https://www.brightcove.com/
 [bikeshedding]: https://www.freebsd.org/doc/en_US.ISO8859-1/books/faq/misc.html#idp60694736
