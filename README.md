@@ -101,7 +101,7 @@ While most issues can be fixed, some, like not handling errors in node-style cal
 
 ### How do I ignore files?
 
-The paths `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, and hidden files/folders (beginning with `.`) are automatically excluded when looking for `.js` files to style check.
+The paths `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, hidden files/folders (beginning with `.`), and all patterns in a project's root `.gitignore` file are automatically ignored.
 
 Sometimes you need to ignore additional folders or specific minfied files. To do that, add a `vjsstandard.ignore` property to `package.json`:
 
