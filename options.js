@@ -1,5 +1,6 @@
-var path = require('path')
-var pkg = require('./package.json')
+var eslint = require('eslint');
+var path = require('path');
+var pkg = require('./package.json');
 
 module.exports = {
   cmd: 'vjsstandard',
@@ -7,7 +8,9 @@ module.exports = {
   homepage: pkg.homepage,
   bugs: pkg.bugs.url,
   tagline: pkg.description,
+  eslint: eslint,
   eslintConfig: {
-    configFile: path.join(__dirname, 'rc', 'eslintrc.json')
-  }
+    configFile: path.join(__dirname, 'eslintrc.json')
+  },
+  cwd: ''
 };
