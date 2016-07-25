@@ -12,7 +12,7 @@
   "dependencies": {
     "babel-eslint": "^6.0.0",
     "eslint": "^2.5.3",
-    "eslint-config-videojs": "^1.0.0",
+    "eslint-config-videojs": "^1.0.2",
     "standard-engine": "^3.3.1"
   },
   "homepage": "https://github.com/videojs/standard",
