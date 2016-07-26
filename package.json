@@ -10,8 +10,8 @@
     "url": "https://github.com/videojs/standard/issues"
   },
   "dependencies": {
-    "babel-eslint": "^6.0.0",
-    "eslint": "^2.5.3",
+    "babel-eslint": "^6.1.2",
+    "eslint": "^2.13.1",
     "eslint-config-videojs": "^1.0.2",
     "standard-engine": "^3.3.1"
   },
