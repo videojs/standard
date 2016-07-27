@@ -61,6 +61,22 @@ Error: Use video.js Standard Style
 
 3. Never give style feedback on a pull request again!
 
+## Contributing
+
+This project should almost never change.
+
+A rule should only change if there is a _very_ compelling reason that the video.js core contributors have agreed upon by discussion in an issue.
+
+### Versioning Guidelines
+
+Because this project can cause builds to fail, we want to avoid any potentially breaking changes outside of major versions. Because this project is mostly a collection of dependencies, any change to those dependencies will require a version change in this project equal to the highest version change in dependencies.
+
+- A dependency being updated by a major version will be a **major** version of videojs-standard.
+- A dependency being updated by a minor version will be a **minor** version of videojs-standard.
+- A dependency being updated by a patch version will be a **patch** version of videojs-standard.
+
+Combined with the rules outlined [in eslint-config-videojs](https://github.com/videojs/eslint-config-videojs/blob/master/README.md#versioning-guidelines), this should allow common version ranges (`~` and `^`) to _never_ introduce a change that could break someone's build due to linter errors!
+
 ## FAQ
 
 ### Why would I use video.js Standard Style?
