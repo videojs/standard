@@ -13,7 +13,7 @@
     "babel-eslint": "^6.1.2",
     "eslint": "^2.13.1",
     "eslint-config-videojs": "^1.0.2",
-    "standard-engine": "^3.3.1"
+    "find-root": "^1.0.0"
   },
   "homepage": "https://github.com/videojs/standard",
   "keywords": [
@@ -43,7 +43,7 @@
     "verify"
   ],
   "license": "Apache-2.0",
-  "main": "index.js",
+  "main": "cli.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/videojs/standard.git"
