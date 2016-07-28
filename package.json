@@ -1,7 +1,7 @@
 {
   "name": "videojs-standard",
   "description": "JavaScript style for plugins and tools in the video.js ecosystem.",
-  "version": "4.0.0",
+  "version": "4.0.3",
   "author": "Brightcove, Inc.",
   "bin": {
     "vjsstandard": "./bin/cmd.js"
