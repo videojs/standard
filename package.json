@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "babel-eslint": "^6.1.2",
+    "commander": "^2.9.0",
     "eslint": "^2.13.1",
     "eslint-config-videojs": "^2.0.0",
-    "find-root": "^1.0.0"
+    "find-root": "^1.0.0",
+    "tsmlb": "^1.0.0"
   },
   "homepage": "https://github.com/videojs/standard",
   "keywords": [
