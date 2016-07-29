@@ -5,12 +5,15 @@ const CLIEngine = require('eslint').CLIEngine;
 const path = require('path');
 const os = require('os');
 const tsmlb = require('tsmlb');
+const filterer = require('./filterer');
 const ignores = require('./ignores');
 const pkg = require(path.join(__dirname, 'package.json'));
 
 commander.
   version(pkg.version).
-  option('--format', 'Format files where possible to comply with videojs-standard.').
+  option('-e, --errors', 'Produces a report that only includes errors; not warnings.').
+  option('-w, --warnings', 'Produces a report that only includes warnings; not errors.').
+  option('--format', 'Formats files where possible to comply with videojs-standard.').
   arguments('[targets...]').
   action(targets => {
     commander.targets = targets;
@@ -30,6 +33,8 @@ const cli = new CLIEngine({
 });
 
 const report = cli.executeOnFiles(commander.targets);
+
+report.results = filterer(report.results, commander.errors, commander.warnings);
 
 if (commander.format) {
   CLIEngine.outputFixes(report);
