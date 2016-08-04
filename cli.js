@@ -32,9 +32,9 @@ const cli = new CLIEngine({
   ignorePattern: ignores(process.cwd())
 });
 
-const report = cli.executeOnFiles(commander.targets);
-
-report.results = filterer(report.results, commander.errors, commander.warnings);
+const report = filterer(cli.executeOnFiles(commander.targets),
+                        commander.errors,
+                        commander.warnings);
 
 if (commander.format) {
   CLIEngine.outputFixes(report);
@@ -60,3 +60,6 @@ if (commander.format) {
 
   console.log(formatter(report.results));
 }
+
+// Exit with a correct code.
+process.exit(report.errorCount ? 1 : 0);

@@ -2,12 +2,13 @@
 /**
  * Filters a set of ESLint results down to either errors or warnings (or both).
  *
- * @param  {Array} results
+ * @param  {Object} report
  * @param  {Boolean} errors
  * @param  {Boolean} warnings
- * @return {Array}
+ * @return {Object}
  */
-module.exports = function filterer(results, errors, warnings) {
+module.exports = function filterer(report, errors, warnings) {
+  var results = report.results;
   var key;
   var opposite;
   var severity;
@@ -24,11 +25,14 @@ module.exports = function filterer(results, errors, warnings) {
 
   // If neither are true, no filtering happens.
   } else {
-    return results;
+    return report;
   }
 
+  // Set the total count for the opposite count to zero.
+  report[opposite] = 0;
+
   // Handle both --errors and --warnings in the same way.
-  return results.
+  report.results = report.results.
 
     // Filter down to only those results which have a count of the appopriate type.
     filter(r => r[key] > 0).
@@ -39,4 +43,6 @@ module.exports = function filterer(results, errors, warnings) {
       r[opposite] = 0;
       return r;
     });
+
+  return report;
 };
