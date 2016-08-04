@@ -34,8 +34,6 @@ $ vjsstandard
 
 ### Arguments
 
-Because this tool is designed to be as simple and hands-off as possible, it offers only one form of command-line argument: which files to check.
-
 `vjsstandard` will accept any number of file identifier arguments. These can be [glob][glob] patterns. Some examples: 
 
 ```bash
@@ -43,6 +41,28 @@ $ vjsstandard foo.js src/**/*.js
 ```
 
 If _not_ provided, `vjsstandard` will recursively check all JavaScript source files in the current working directory.
+
+### Options
+
+#### `-e`/`--errors`
+
+Produces a report that only includes errors; not warnings.
+
+#### `-w`/`--warnings`
+
+Produces a report that only includes warnings; not errors.
+
+#### `--format`
+
+Instead of producing a report on the errors and warnings found in files, this will attempt to use ESLint's auto-formatting capabilities to overwrite existing files to resolve rules violations.
+
+#### `--help`
+
+Outputs help on using videojs-standard.
+
+#### `--version`
+
+Outputs the version number of videojs-standard.
 
 ### Ignoring Files
 
