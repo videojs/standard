@@ -6,6 +6,10 @@
 
 This module provides a hands-off wrapper around ESLint and the video.js organization's [shared ESLint config][config]. It checks ("lints") your code to verify that it complies with our organization's agreed-upon standards.
 
+Lead Maintainer: Pat O'Neill [@misteroneill](https://github.com/misteroneill)
+
+Maintenance Status: Stable
+
 ## Install
 
 ```bash
