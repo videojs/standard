@@ -1,5 +1,7 @@
 # video.js Standard Style
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/videojs/standard.svg)](https://greenkeeper.io/)
+
 [![travis][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
