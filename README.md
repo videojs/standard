@@ -1,10 +1,10 @@
 # video.js Standard Style
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/videojs/standard.svg)](https://greenkeeper.io/)
 
 [![travis][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
+[![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
 
 This module provides a hands-off wrapper around ESLint and the video.js organization's [shared ESLint config][config]. It checks ("lints") your code to verify that it complies with our organization's agreed-upon standards.
 
@@ -117,3 +117,5 @@ Apache-2.0. Copyright (c) [Brightcove, Inc.][bcov]
 [npm-url]: https://npmjs.org/package/videojs-standard
 [travis-image]: https://img.shields.io/travis/videojs/standard.svg?style=flat
 [travis-url]: https://travis-ci.org/videojs/standard
+[greenkeeper-image]: https://badges.greenkeeper.io/videojs/standard.svg
+[greenkeeper-url]: https://greenkeeper.io/
