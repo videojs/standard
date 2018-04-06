@@ -15,7 +15,7 @@
     "eslint": "^2.13.1",
     "eslint-config-videojs": "^3.0.1",
     "eslint-plugin-markdown": "^1.0.0-beta.2",
-    "eslint-plugin-jsdoc": "^2.3.1",
+    "eslint-plugin-jsdoc": "^3.6.0",
     "eslint-plugin-json": "^1.2.0",
     "find-root": "^1.0.0",
     "tsmlb": "^1.0.0"
