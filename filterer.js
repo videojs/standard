@@ -3,15 +3,14 @@
  * Filters a set of ESLint results down to either errors or warnings (or both).
  *
  * @param  {Object} report
- * @param  {Boolean} errors
- * @param  {Boolean} warnings
+ * @param  {boolean} errors
+ * @param  {boolean} warnings
  * @return {Object}
  */
 module.exports = function filterer(report, errors, warnings) {
-  var results = report.results;
-  var key;
-  var opposite;
-  var severity;
+  let key;
+  let opposite;
+  let severity;
 
   // --errors always takes precedence over --warnings.
   if (errors) {

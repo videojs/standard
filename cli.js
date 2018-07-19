@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/* eslint-disable no-console */
+
 const commander = require('commander');
 const CLIEngine = require('eslint').CLIEngine;
 const path = require('path');
@@ -33,8 +35,8 @@ const cli = new CLIEngine({
 });
 
 const report = filterer(cli.executeOnFiles(commander.targets),
-                        commander.errors,
-                        commander.warnings);
+  commander.errors,
+  commander.warnings);
 
 if (commander.format) {
   CLIEngine.outputFixes(report);
