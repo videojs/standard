@@ -4,11 +4,11 @@ const path = require('path');
 /**
  * Get ignored file patterns for a directory, if any.
  *
- * @param  {String} dir
+ * @param  {string} dir
  * @return {Array|undefined}
  */
 module.exports = function ignores(dir) {
-  var root;
+  let root;
 
   try {
     root = findRoot(dir);
