@@ -40,7 +40,7 @@ $ vjsstandard
 
 ### Arguments
 
-`vjsstandard` will accept any number of file identifier arguments. These can be [glob][glob] patterns. Some examples: 
+`vjsstandard` will accept any number of file identifier arguments. These can be [glob][glob] patterns. Some examples:
 
 ```bash
 $ vjsstandard foo.js src/**/*.js
@@ -58,7 +58,7 @@ Produces a report that only includes errors; not warnings.
 
 Produces a report that only includes warnings; not errors.
 
-#### `--format`
+#### `--format`/`--fix`
 
 Instead of producing a report on the errors and warnings found in files, this will attempt to use ESLint's auto-formatting capabilities to overwrite existing files to resolve rules violations.
 
@@ -111,7 +111,7 @@ Apache-2.0. Copyright (c) [Brightcove, Inc.][bcov]
 [config]: https://github.com/videojs/eslint-config-videojs
 [downloads-image]: https://img.shields.io/npm/dm/videojs-standard.svg?style=flat
 [downloads-url]: https://npmjs.org/package/videojs-standard
-[generator]: https://github.com/videojs/generator-videojs-plugin 
+[generator]: https://github.com/videojs/generator-videojs-plugin
 [glob]: https://www.npmjs.com/package/glob
 [npm-image]: https://img.shields.io/npm/v/videojs-standard.svg?style=flat
 [npm-url]: https://npmjs.org/package/videojs-standard

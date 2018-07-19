@@ -13,7 +13,7 @@ commander.
   version(pkg.version).
   option('-e, --errors', 'Produces a report that only includes errors; not warnings.').
   option('-w, --warnings', 'Produces a report that only includes warnings; not errors.').
-  option('--format', 'Formats files where possible to comply with videojs-standard.').
+  option('--fix, --format', 'Formats/fixes files where possible to comply with videojs-standard.').
   arguments('[targets...]').
   action(targets => {
     commander.targets = targets;
