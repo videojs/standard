@@ -1,10 +1,10 @@
 # video.js Standard Style
 
+[![Build Status](https://travis-ci.org/videojs/standard.svg?branch=master)](https://travis-ci.org/videojs/standard)
+[![Greenkeeper badge](https://badges.greenkeeper.io/videojs/standard.svg)](https://greenkeeper.io/)
+[![Slack Status](http://slack.videojs.com/badge.svg)](http://slack.videojs.com)
 
-[![travis][travis-image]][travis-url]
-[![npm][npm-image]][npm-url]
-[![downloads][downloads-image]][downloads-url]
-[![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
+[![NPM](https://nodei.co/npm/videojs-standard.png?downloads=true&downloadRank=true)](https://nodei.co/npm/videojs-standard/)
 
 This module provides a hands-off wrapper around ESLint and the video.js organization's [shared ESLint config][config]. It checks ("lints") your code to verify that it complies with our organization's agreed-upon standards.
 
@@ -109,13 +109,6 @@ Apache-2.0. Copyright (c) [Brightcove, Inc.][bcov]
 
 [bcov]: https://www.brightcove.com/
 [config]: https://github.com/videojs/eslint-config-videojs
-[downloads-image]: https://img.shields.io/npm/dm/videojs-standard.svg?style=flat
-[downloads-url]: https://npmjs.org/package/videojs-standard
 [generator]: https://github.com/videojs/generator-videojs-plugin
 [glob]: https://www.npmjs.com/package/glob
-[npm-image]: https://img.shields.io/npm/v/videojs-standard.svg?style=flat
-[npm-url]: https://npmjs.org/package/videojs-standard
-[travis-image]: https://img.shields.io/travis/videojs/standard.svg?style=flat
-[travis-url]: https://travis-ci.org/videojs/standard
-[greenkeeper-image]: https://badges.greenkeeper.io/videojs/standard.svg
-[greenkeeper-url]: https://greenkeeper.io/
+
