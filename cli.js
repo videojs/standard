@@ -23,7 +23,7 @@ commander.
   parse(process.argv);
 
 // If no targets were specified, default to this directory.
-if (!commander.targets) {
+if (!commander.targets || !commander.targets.length) {
   commander.targets = ['.'];
 }
 
