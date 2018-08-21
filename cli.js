@@ -1,67 +1,41 @@
 #!/usr/bin/env node
-
-/* eslint-disable no-console */
-
-const commander = require('commander');
-const CLIEngine = require('eslint').CLIEngine;
+const spawnSync = require('child_process').spawnSync;
+const findRoot = require('find-root');
 const path = require('path');
-const os = require('os');
-const tsmlb = require('tsmlb');
-const filterer = require('./filterer');
-const ignores = require('./ignores');
-const pkg = require(path.join(__dirname, 'package.json'));
 
-commander.
-  version(pkg.version).
-  option('-e, --errors', 'Produces a report that only includes errors; not warnings.').
-  option('-w, --warnings', 'Produces a report that only includes warnings; not errors.').
-  option('--fix, --format', 'Formats/fixes files where possible to comply with videojs-standard.').
-  arguments('[targets...]').
-  action(targets => {
-    commander.targets = targets;
-  }).
-  parse(process.argv);
+/**
+ * Get ignored file patterns from package.json
+ */
+const ignores = (function ignores() {
+  let root;
+  let ignores = [];
 
-// If no targets were specified, default to this directory.
-if (!commander.targets || !commander.targets.length) {
-  commander.targets = ['.'];
-}
-
-const cli = new CLIEngine({
-  cwd: process.cwd(),
-  configFile: path.join(__dirname, 'eslintrc.json'),
-  fix: Boolean(commander.format),
-  ignorePattern: ignores(process.cwd())
-});
-
-const report = filterer(cli.executeOnFiles(commander.targets),
-  commander.errors,
-  commander.warnings);
-
-if (commander.format) {
-  CLIEngine.outputFixes(report);
-
-  const applied = report.results.
-    map(result => result.output ? result.filePath : '').
-    filter(Boolean);
-
-  if (applied.length) {
-    console.log(tsmlb`
-      Applied fixes to ${applied.length} files:
-        ${applied.join(os.EOL + '        ')}
-    `);
+  try {
+    root = findRoot(process.cwd());
+  } catch (x) {
+    return ignores;
   }
 
-  if (applied.length < report.results.length) {
-    console.log(tsmlb`
-      Could not apply fixes to ${applied.length ? report.results.length - applied.length : 'any'} files!
-    `);
-  }
-} else {
-  const formatter = cli.getFormatter();
+  const pkg = require(path.join(root, 'package.json'));
 
-  console.log(formatter(report.results));
-}
+  ignores = ignores
+    .concat(pkg.eslintIgnore || [])
+    .concat(pkg.vjsstandard && pkg.vjsstandard.ignore || []);
 
-// Exit with a correct code.
-process.exit(report.errorCount ? 1 : 0);
+  return ignores;
+})();
+
+const ignoreArgs = ignores.reduce((acc, ig) => acc.concat(['--ignore-pattern', ig]), []);
+// defaults
+const args = [
+  '--config', path.join(__dirname, 'eslintrc.json')
+]
+  .concat(ignoreArgs)
+
+  // add user args
+  .concat(process.argv.splice(2))
+
+
+const retval = spawnSync('eslint', args, {stdio: 'inherit', env: process.env});
+
+process.exit(retval.status);
