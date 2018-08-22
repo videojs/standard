@@ -58,11 +58,11 @@ if (commander.format) {
       Could not apply fixes to ${applied.length ? report.results.length - applied.length : 'any'} files!
     `);
   }
-} else {
-  const formatter = cli.getFormatter();
-
-  console.log(formatter(report.results));
 }
+
+const formatter = cli.getFormatter();
+
+console.log(formatter(report.results));
 
 // Exit with a correct code.
 process.exit(report.errorCount ? 1 : 0);
