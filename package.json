@@ -1,7 +1,7 @@
 {
   "name": "videojs-standard",
   "description": "JavaScript style for plugins and tools in the video.js ecosystem.",
-  "version": "6.0.5",
+  "version": "7.0.0",
   "author": "Brightcove, Inc.",
   "scripts": {
     "lint": "./cli.js"
