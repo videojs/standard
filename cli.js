@@ -8,7 +8,7 @@ const path = require('path');
 const os = require('os');
 const tsmlb = require('tsmlb');
 const filterer = require('./filterer');
-const ignores = require('./ignores');
+const getConfig = require('./get-config');
 const pkg = require(path.join(__dirname, 'package.json'));
 
 commander.
@@ -27,13 +27,19 @@ if (!commander.targets || !commander.targets.length) {
   commander.targets = ['.'];
 }
 
-const cli = new CLIEngine({
+const config = getConfig(process.cwd());
+
+if (config.ignore) {
+  config.ignorePattern = config.ignore;
+  delete config.ignore;
+}
+
+const cli = new CLIEngine(Object.assign({
   cwd: process.cwd(),
   configFile: path.join(__dirname, 'eslintrc.json'),
   fix: Boolean(commander.format),
-  ignorePattern: ignores(process.cwd()),
   cache: true
-});
+}, config));
 
 const report = filterer(cli.executeOnFiles(commander.targets),
   commander.errors,
