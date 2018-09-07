@@ -1,3 +1,25 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [video.js Standard Style](#videojs-standard-style)
+  - [Install](#install)
+  - [Usage](#usage)
+    - [Arguments](#arguments)
+    - [Options](#options)
+      - [`-e`/`--errors`](#-e--errors)
+      - [`-w`/`--warnings`](#-w--warnings)
+      - [`--format`/`--fix`](#--format--fix)
+      - [`--help`](#--help)
+      - [`--version`](#--version)
+    - [Ignoring Files](#ignoring-files)
+    - [Don't check jsdoc](#dont-check-jsdoc)
+  - [Contributing](#contributing)
+    - [Versioning Guidelines](#versioning-guidelines)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # video.js Standard Style
 
 [![Build Status](https://travis-ci.org/videojs/standard.svg?branch=master)](https://travis-ci.org/videojs/standard)
@@ -83,6 +105,20 @@ File [glob][glob] patterns can be ignored by adding them to your project's `pack
       "**/dist/**",
       "Gulpfile.js"
     ]
+  }
+}
+```
+
+### Don't check jsdoc
+
+> Note: By default this option is set to true, even if the option is not provided.
+
+Some projects don't use jsdoc and don't care if jsdoc exists or not. We added an option that you can add in you `package.json` in order to turn off all the jsdoc rules. All you have to do is set `vjsstandard.jsdoc` to `false`:
+
+```json
+{
+  "vjsstandard": {
+    "jsdoc": false,
   }
 }
 ```
