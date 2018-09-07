@@ -13,12 +13,10 @@ module.exports = function ignores(dir) {
   try {
     root = findRoot(dir);
   } catch (x) {
-    return;
+    return {};
   }
 
   const pkg = require(path.join(root, 'package.json'));
 
-  if (pkg.vjsstandard && pkg.vjsstandard.hasOwnProperty('ignore')) {
-    return pkg.vjsstandard.ignore;
-  }
+  return pkg.vjsstandard || {};
 };
