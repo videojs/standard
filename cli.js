@@ -45,9 +45,11 @@ const cli = new CLIEngine({
   rules
 });
 
-const report = filterer(cli.executeOnFiles(commander.targets),
+const report = filterer(
+  cli.executeOnFiles(commander.targets),
   commander.errors,
-  commander.warnings);
+  commander.warnings
+);
 
 if (commander.format) {
   CLIEngine.outputFixes(report);
