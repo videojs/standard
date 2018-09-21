@@ -1,3 +1,10 @@
+<a name="8.0.1"></a>
+## [8.0.1](https://github.com/videojs/standard/compare/v8.0.0...v8.0.1) (2018-09-21)
+
+### Bug Fixes
+
+* update eslint-config-videojs ([587da85](https://github.com/videojs/standard/commit/587da85))
+
 <a name="8.0.0"></a>
 # [8.0.0](https://github.com/videojs/standard/compare/v7.1.0...v8.0.0) (2018-09-21)
 
