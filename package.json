@@ -82,5 +82,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "vjsstandard": {
+    "jsdoc": false
   }
 }
