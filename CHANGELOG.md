@@ -1,3 +1,14 @@
+<a name="8.0.2"></a>
+## [8.0.2](https://github.com/videojs/standard/compare/v8.0.1...v8.0.2) (2018-09-26)
+
+### Bug Fixes
+
+* Properly allow .eslintrc overrides and restore support for ES6 globals by default. ([#40](https://github.com/videojs/standard/issues/40)) ([560bcdb](https://github.com/videojs/standard/commit/560bcdb))
+
+### Documentation
+
+* Remove "Lead Maintainer" from README.md ([e9d6887](https://github.com/videojs/standard/commit/e9d6887))
+
 <a name="8.0.1"></a>
 ## [8.0.1](https://github.com/videojs/standard/compare/v8.0.0...v8.0.1) (2018-09-21)
 
