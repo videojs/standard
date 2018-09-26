@@ -38,7 +38,7 @@ if (config.jsdoc === false) {
 
 const cli = new CLIEngine({
   cwd: process.cwd(),
-  configFile: path.join(__dirname, 'eslintrc.json'),
+  baseConfig: require(path.join(__dirname, 'eslintrc.json')),
   fix: Boolean(commander.format),
   ignorePattern: config.ignore,
   cache: true,
