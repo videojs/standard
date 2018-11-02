@@ -42,6 +42,7 @@ const cli = new CLIEngine({
   fix: Boolean(commander.format),
   ignorePattern: config.ignore,
   cache: true,
+  extensions: ['.js', '.jsx', '.json', '.md', '.html', '.html.example', '.htm', '.handlebars'],
   rules
 });
 
