@@ -36,6 +36,9 @@ if (config.jsdoc === false) {
   rules['jsdoc/newline-after-description'] = 'off';
 }
 
+config.ignore = config.ignore || [];
+config.ignore.push('node_modules');
+
 const cli = new CLIEngine({
   cwd: process.cwd(),
   baseConfig: require(path.join(__dirname, 'eslintrc.json')),
