@@ -12,7 +12,7 @@ const getConfig = require('./get-config');
 const pkg = require(path.join(__dirname, 'package.json'));
 
 commander.
-  version(pkg.version).
+  version('videojs-standard: ' + pkg.version + os.EOL + 'eslint: ' + CLIEngine.version).
   option('-e, --errors', 'Produces a report that only includes errors; not warnings.').
   option('-w, --warnings', 'Produces a report that only includes warnings; not errors.').
   option('--fix, --format', 'Formats/fixes files where possible to comply with videojs-standard.').
