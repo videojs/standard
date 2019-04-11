@@ -1,3 +1,22 @@
+<a name="8.0.3"></a>
+## [8.0.3](https://github.com/videojs/standard/compare/v8.0.2...v8.0.3) (2019-04-11)
+
+### Features
+
+* report eslint version too ([#54](https://github.com/videojs/standard/issues/54)) ([ea81d3a](https://github.com/videojs/standard/commit/ea81d3a))
+
+### Bug Fixes
+
+* ignore node modules ([#53](https://github.com/videojs/standard/issues/53)) ([0187dd3](https://github.com/videojs/standard/commit/0187dd3))
+
+### Chores
+
+* **package:** update deps ([#52](https://github.com/videojs/standard/issues/52)) ([516279f](https://github.com/videojs/standard/commit/516279f))
+* **package:** update eslint-plugin-jsdoc to version 4.8.3 ([#51](https://github.com/videojs/standard/issues/51)) ([b4b5c01](https://github.com/videojs/standard/commit/b4b5c01))
+* **package:** update lint-staged to version 8.0.4 ([#44](https://github.com/videojs/standard/issues/44)) ([7e682fa](https://github.com/videojs/standard/commit/7e682fa))
+* **package:** update lockfile package-lock.json ([#47](https://github.com/videojs/standard/issues/47)) ([8c16946](https://github.com/videojs/standard/commit/8c16946))
+* **package:** use [@videojs](https://github.com/videojs)/generator-helpers ([0cc81a5](https://github.com/videojs/standard/commit/0cc81a5))
+
 <a name="8.0.2"></a>
 ## [8.0.2](https://github.com/videojs/standard/compare/v8.0.1...v8.0.2) (2018-09-26)
 
