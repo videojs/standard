@@ -27,7 +27,7 @@
     "url": "https://github.com/videojs/standard/issues"
   },
   "dependencies": {
-    "commander": "^2.17.1",
+    "commander": "^3.0.0",
     "eslint": "^5.16.0",
     "eslint-config-videojs": "^5.0.2",
     "eslint-plugin-jsdoc": "^4.8.3",
