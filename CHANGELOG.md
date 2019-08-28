@@ -1,3 +1,10 @@
+<a name="8.0.4"></a>
+## [8.0.4](https://github.com/videojs/standard/compare/v8.0.3...v8.0.4) (2019-08-28)
+
+### Chores
+
+* **package:** update dependencies to address npm audit ([#58](https://github.com/videojs/standard/issues/58)) ([0462bb4](https://github.com/videojs/standard/commit/0462bb4))
+
 <a name="8.0.3"></a>
 ## [8.0.3](https://github.com/videojs/standard/compare/v8.0.2...v8.0.3) (2019-04-11)
 
