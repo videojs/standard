@@ -8,7 +8,8 @@
     "test": "npm run lint",
     "preversion": "npm test",
     "version": "is-prerelease || npm run update-changelog && git add CHANGELOG.md",
-    "update-changelog": "conventional-changelog -p videojs -i CHANGELOG.md -s"
+    "update-changelog": "conventional-changelog -p videojs -i CHANGELOG.md -s",
+    "postinstall": "node remove-cache.js"
   },
   "lint-staged": {
     "*.js": [
