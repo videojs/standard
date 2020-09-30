@@ -1,3 +1,10 @@
+<a name="8.0.6"></a>
+## [8.0.6](https://github.com/videojs/standard/compare/v8.0.5...v8.0.6) (2020-09-30)
+
+### Bug Fixes
+
+* always remove cache using root directory ([#65](https://github.com/videojs/standard/issues/65)) ([5dce8e3](https://github.com/videojs/standard/commit/5dce8e3))
+
 <a name="8.0.5"></a>
 ## [8.0.5](https://github.com/videojs/standard/compare/v8.0.4...v8.0.5) (2020-09-30)
 
