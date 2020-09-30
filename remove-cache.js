@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const cache = path.join(process.env.INIT_CWD, '.eslintcache');
+const cache = path.join(process.cwd(), '.eslintcache');
 
 try {
   fs.unlinkSync(cache);
