@@ -10,7 +10,7 @@
     "version": "is-prerelease || npm run update-changelog && git add CHANGELOG.md",
     "update-changelog": "conventional-changelog -p videojs -i CHANGELOG.md -s",
     "postinstall": "node remove-cache.js",
-    "prepublishOnly": "vjsverify --verbose"
+    "prepublishOnly": "vjsverify --skip-syntax --skip-require --verbose"
   },
   "lint-staged": {
     "*.js": "./cli.js --fix",
