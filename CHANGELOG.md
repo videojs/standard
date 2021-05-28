@@ -1,3 +1,21 @@
+<a name="9.0.0"></a>
+# [9.0.0](https://github.com/videojs/standard/compare/v8.0.6...v9.0.0) (2021-05-28)
+
+### Bug Fixes
+
+* do not use local .eslintrc files ([#45](https://github.com/videojs/standard/issues/45)) ([6f26450](https://github.com/videojs/standard/commit/6f26450))
+
+### Chores
+
+* fix vjsverify by skipping some checks ([a3fdbee](https://github.com/videojs/standard/commit/a3fdbee))
+* update to eslint 7 ([#66](https://github.com/videojs/standard/issues/66)) ([977eeeb](https://github.com/videojs/standard/commit/977eeeb))
+
+
+### BREAKING CHANGES
+
+* local eslintrc files are no longer supported.
+* minimum supported node version is now 14
+
 <a name="8.0.6"></a>
 ## [8.0.6](https://github.com/videojs/standard/compare/v8.0.5...v8.0.6) (2020-09-30)
 
