@@ -45,6 +45,7 @@ const cli = new CLIEngine({
   fix: Boolean(commander.format),
   ignorePattern: config.ignore,
   cache: true,
+  useEslintrc: false,
   rules
 });
 
