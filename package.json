@@ -9,17 +9,12 @@
     "preversion": "npm test",
     "version": "is-prerelease || npm run update-changelog && git add CHANGELOG.md",
     "update-changelog": "conventional-changelog -p videojs -i CHANGELOG.md -s",
-    "postinstall": "node remove-cache.js"
+    "postinstall": "node remove-cache.js",
+    "prepublishOnly": "vjsverify --verbose"
   },
   "lint-staged": {
-    "*.js": [
-      "./cli.js --fix",
-      "git add"
-    ],
-    "README.md": [
-      "doctoc",
-      "git add"
-    ]
+    "*.js": "./cli.js --fix",
+    "README.md": "doctoc --no-title"
   },
   "bin": {
     "vjsstandard": "./cli.js"
@@ -28,17 +23,18 @@
     "url": "https://github.com/videojs/standard/issues"
   },
   "dependencies": {
-    "commander": "^2.17.1",
-    "eslint": "^5.16.0",
-    "eslint-config-videojs": "^5.0.2",
-    "eslint-plugin-jsdoc": "^4.8.4",
+    "commander": "^7.2.0",
+    "eslint": "^7.27.0",
+    "eslint-config-videojs": "^6.0.0",
+    "eslint-plugin-jsdoc": "^35.0.0",
     "eslint-plugin-json-light": "^1.0.3",
-    "eslint-plugin-markdown": "^1.0.0",
-    "find-root": "^1.0.0",
+    "eslint-plugin-markdown": "^2.2.0",
+    "find-root": "^1.1.0",
     "tsmlb": "^1.0.0"
   },
   "devDependencies": {
-    "@videojs/generator-helpers": "^1.1.0"
+    "@videojs/generator-helpers": "^3.0.0",
+    "videojs-generator-verify": "^4.0.0"
   },
   "homepage": "https://github.com/videojs/standard",
   "keywords": [
