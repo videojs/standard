@@ -24,9 +24,9 @@
   },
   "dependencies": {
     "commander": "^7.2.0",
-    "eslint": "^7.27.0",
+    "eslint": "^7.28.0",
     "eslint-config-videojs": "^6.0.0",
-    "eslint-plugin-jsdoc": "^35.0.0",
+    "eslint-plugin-jsdoc": "^35.3.0",
     "eslint-plugin-json-light": "^1.0.3",
     "eslint-plugin-markdown": "^2.2.0",
     "find-root": "^1.1.0",

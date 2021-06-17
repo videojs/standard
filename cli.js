@@ -2,7 +2,7 @@
 
 /* eslint-disable no-console */
 
-const commander = require('commander');
+const {Command} = require('commander');
 const CLIEngine = require('eslint').CLIEngine;
 const path = require('path');
 const os = require('os');
@@ -11,20 +11,25 @@ const filterer = require('./filterer');
 const getConfig = require('./get-config');
 const pkg = require(path.join(__dirname, 'package.json'));
 
-commander.
+const program = new Command();
+const opts = {};
+
+program.
   version('videojs-standard: ' + pkg.version + os.EOL + 'eslint: ' + CLIEngine.version).
+  arguments('[targets...]').
+  action((targets) => {
+    opts.targets = targets;
+  }).
   option('-e, --errors', 'Produces a report that only includes errors; not warnings.').
   option('-w, --warnings', 'Produces a report that only includes warnings; not errors.').
   option('--fix, --format', 'Formats/fixes files where possible to comply with videojs-standard.').
-  arguments('[targets...]').
-  action(targets => {
-    commander.targets = targets;
-  }).
   parse(process.argv);
 
+Object.assign(opts, program.opts());
+
 // If no targets were specified, default to this directory.
-if (!commander.targets || !commander.targets.length) {
-  commander.targets = ['.'];
+if (!opts.targets || !opts.targets.length) {
+  opts.targets = ['.'];
 }
 
 const config = getConfig(process.cwd());
@@ -42,7 +47,7 @@ config.ignore.push('node_modules');
 const cli = new CLIEngine({
   cwd: process.cwd(),
   baseConfig: require(path.join(__dirname, 'eslintrc.json')),
-  fix: Boolean(commander.format),
+  fix: Boolean(opts.format),
   ignorePattern: config.ignore,
   cache: true,
   useEslintrc: false,
@@ -50,12 +55,12 @@ const cli = new CLIEngine({
 });
 
 const report = filterer(
-  cli.executeOnFiles(commander.targets),
-  commander.errors,
-  commander.warnings
+  cli.executeOnFiles(opts.targets),
+  opts.errors,
+  opts.warnings
 );
 
-if (commander.format) {
+if (opts.format) {
   CLIEngine.outputFixes(report);
 
   const applied = report.results.
