@@ -1,3 +1,10 @@
+<a name="9.0.1"></a>
+## [9.0.1](https://github.com/videojs/standard/compare/v9.0.0...v9.0.1) (2021-06-17)
+
+### Bug Fixes
+
+* cli not working as intended due to commander update ([ed0423c](https://github.com/videojs/standard/commit/ed0423c))
+
 <a name="9.0.0"></a>
 # [9.0.0](https://github.com/videojs/standard/compare/v8.0.6...v9.0.0) (2021-05-28)
 
