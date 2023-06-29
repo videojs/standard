@@ -28,13 +28,13 @@
     "eslint-config-videojs": "^6.0.0",
     "eslint-plugin-jsdoc": "^35.3.0",
     "eslint-plugin-json-light": "^1.0.3",
-    "eslint-plugin-markdown": "^2.2.0",
+    "eslint-plugin-markdown": "^3.0.0",
     "find-root": "^1.1.0",
     "tsmlb": "^1.0.0"
   },
   "devDependencies": {
-    "@videojs/generator-helpers": "^3.0.0",
-    "videojs-generator-verify": "^4.0.0"
+    "@videojs/generator-helpers": "^3.2.0",
+    "videojs-generator-verify": "^4.0.1"
   },
   "homepage": "https://github.com/videojs/standard",
   "keywords": [
