@@ -1,3 +1,6 @@
 {
-  "extends": ["videojs"]
+  "extends": ["videojs"],
+  "parserOptions": {
+    "ecmaVersion": 9
+  }
 }
