@@ -1,3 +1,14 @@
+<a name="9.1.0"></a>
+# [9.1.0](https://github.com/videojs/standard/compare/v9.0.1...v9.1.0) (2024-05-10)
+
+### Features
+
+* update vjs eslint to v6.1.0 and audit fix ([#70](https://github.com/videojs/standard/issues/70)) ([d7e6fbd](https://github.com/videojs/standard/commit/d7e6fbd))
+
+### Chores
+
+* **package:** update dependencies ([#67](https://github.com/videojs/standard/issues/67)) ([31ab608](https://github.com/videojs/standard/commit/31ab608))
+
 <a name="9.0.1"></a>
 ## [9.0.1](https://github.com/videojs/standard/compare/v9.0.0...v9.0.1) (2021-06-17)
 
